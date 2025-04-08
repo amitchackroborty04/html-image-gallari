@@ -31,6 +31,7 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+  aspect-ratio:2/3 ;
 }
 
 .div2 {
@@ -47,6 +48,7 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+   aspect-ratio:2/3 ;
 }
 
 .div3 {
@@ -63,6 +65,7 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+   aspect-ratio:2/3 ;
 
 }
 
@@ -75,6 +78,7 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+   aspect-ratio:2/3 ;
 }
 
 .div5 {
@@ -87,6 +91,7 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+   aspect-ratio:2/3 ;
 }
 
 .div6 {
@@ -99,6 +104,7 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+   aspect-ratio:2/3 ;
 }
 
 .div7 {
@@ -111,6 +117,7 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+   aspect-ratio:2/3 ;
 }
 
 .div8 {
@@ -123,6 +130,7 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+   aspect-ratio:2/3 ;
 }
 
 .div9 {
@@ -135,6 +143,7 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+   aspect-ratio:2/3 ;
 }
 
 .div10 {
@@ -149,6 +158,7 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+   aspect-ratio:2/3 ;
 }
 
 .div11 {
@@ -161,15 +171,16 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+   aspect-ratio:2/3 ;
 }  
 
 
 
 /* Inner parts - side by side */
-.div3Part1,
-.div3Part2,
-.div10Part1,
-.div10Part2 {
+.div3-part1,
+.div3-part2,
+.div10-part1,
+.div10-part2 {
    flex: 1;
   height: 100%; /* Make each part take the full height */
   display: flex;
@@ -179,13 +190,14 @@
   overflow: hidden;
 }
 
-.div3Part1 img,
-.div3Part2 img,
-.div10Part1 img,
-.div10Part2 img {
+.div3-part1 img,
+.div3-part2 img,
+.div10-part1 img,
+.div10-part2 img {
   width: 100%;
   height: 100%;
   object-fit: fill;
+   aspect-ratio:2/3 ;
 }
 
 /* Ensure div3 and its parts take full height */
@@ -198,7 +210,7 @@
   gap: 5px;
 }
 
-.div3Part1, .div3Part2 {
+.div3-part1, .div3-part2 {
   flex: 1;
   height: 100%; /* Ensure full height */
   display: flex;
@@ -209,29 +221,29 @@
 }
 
 /* Make sure the background colors work */
-.div3Part1 {
+.div3-part1 {
   background-color: #faddeb; /* Soft pink */
   height: 100%; /* Ensure full height */
 }
 
-.div3Part2 {
+.div3-part2 {
   background-color: #d0f4de; /* Light green */
   height: 100%; /* Ensure full height */
 }
 
 /* Ensure images inside div3 take full height */
-.div3Part1 img, .div3Part2 img {
+.div3-part1 img, .div3-part2 img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures images cover the area properly */
 }
 
 
-.div10Part1 {
+.div10-part1 {
   background-color: #fec89a;
 }
 
-.div10Part2 {
+.div10-part2 {
   background-color: #ffdac1;
 }
 .fade-image {
@@ -243,7 +255,7 @@
   opacity: 0;
 }
 
-.aspect-2-3 {
+/* .aspect-2-3 {
   position: relative;
   width: 100%;
   aspect-ratio: 2 / 3;
@@ -257,7 +269,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover; 
-}
+} */
 
 
 
@@ -317,11 +329,12 @@
     grid-template-columns: 1fr;
   }
 
-  .div3Part1,
-  .div3Part2,
-  .div10Part1,
-  .div10Part2 {
+  .div3-part1,
+  .div3-part2,
+  .div10-part1,
+  .div10-part2 {
     width: 100%;
+    height: 100%;
   }
 
   .div3,
