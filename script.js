@@ -144,7 +144,7 @@ function rotateAndMoveImages() {
 
     // Move to the next container for the next cycle
     index = (index + 1) % containers.length;
-  }, 4000); // Fixed interval of 40 seconds for each container, changing one by one
+  }, 3500); // Fixed interval of 40 seconds for each container, changing one by one
 }
 
 // Start rotation with fixed 40-second interval for each container
