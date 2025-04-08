@@ -222,12 +222,12 @@
 
 /* Make sure the background colors work */
 .div3-part1 {
-  background-color: #faddeb; /* Soft pink */
+ /* Soft pink */
   height: 100%; /* Ensure full height */
 }
 
 .div3-part2 {
-  background-color: #d0f4de; /* Light green */
+
   height: 100%; /* Ensure full height */
 }
 
@@ -239,13 +239,13 @@
 }
 
 
-.div10-part1 {
+/* .div10-part1 {
   background-color: #fec89a;
-}
+} */
 
-.div10-part2 {
+/* .div10-part2 {
   background-color: #ffdac1;
-}
+} */
 .fade-image {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
