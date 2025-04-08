@@ -2,14 +2,12 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  grid-column-gap: 5px; /* Horizontal gap */
-  grid-row-gap: 5px; /* Vertical gap */
-  height: 100vh;
-
-  padding-left: 10px;
-  padding-right: 10px;
+  grid-column-gap: 5px; 
+  grid-row-gap: 5px; 
+  height: 98vh;
+  /* background-color: chartreuse; */
+ 
 }
-
 .parent > div {
   display: flex;
   justify-content: center;
@@ -55,8 +53,10 @@
   grid-area: 1 / 3 / 3 / 6;
   display: flex;
   flex-direction: row;
+  height: 100%;
   padding: 0;
   gap: 5px;
+  
 }
 
 .div3 img {
@@ -161,15 +161,17 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
-}
+}  
+
+
 
 /* Inner parts - side by side */
 .div3Part1,
 .div3Part2,
 .div10Part1,
 .div10Part2 {
-  flex: 1;
-  height: 100%;
+   flex: 1;
+  height: 100%; /* Make each part take the full height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,13 +188,44 @@
   object-fit: fill;
 }
 
+/* Ensure div3 and its parts take full height */
+.div3 {
+  grid-area: 1 / 3 / 3 / 6;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding: 0;
+  gap: 5px;
+}
+
+.div3Part1, .div3Part2 {
+  flex: 1;
+  height: 100%; /* Ensure full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+/* Make sure the background colors work */
 .div3Part1 {
-  background-color: #faf3dd;
+  background-color: #faddeb; /* Soft pink */
+  height: 100%; /* Ensure full height */
 }
 
 .div3Part2 {
-  background-color: #d0f4de;
+  background-color: #d0f4de; /* Light green */
+  height: 100%; /* Ensure full height */
 }
+
+/* Ensure images inside div3 take full height */
+.div3Part1 img, .div3Part2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images cover the area properly */
+}
+
 
 .div10Part1 {
   background-color: #fec89a;
@@ -223,7 +256,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* or use 'contain' if you want full image visibility */
+  object-fit: cover; 
 }
 
 
