@@ -121,31 +121,31 @@ function shuffleArray(arr) {
 
 // Function to rotate images with a fixed 40s interval, sequentially
 function rotateAndMoveImages() {
-  let index = 0; // Start with the first container
-
   setInterval(() => {
     const shuffledImages = shuffleArray(imagesGroup);
-    const container = containers[index];
+    const shuffledContainers = shuffleArray(containers);
 
-    const img = container.querySelector("img");
+    // Take the first 5 containers and change their images
+    for (let i = 0; i < 5; i++) {
+      const container = shuffledContainers[i];
+      const img = container.querySelector("img");
 
-    // Fade out the current image
-    img.classList.add("fade-out");
+      // Fade out current image
+      img.classList.add("fade-out");
 
-    setTimeout(() => {
-      // Change the image source after fade-out
-      img.src = shuffledImages[index % shuffledImages.length];
+      setTimeout(() => {
+        // Change to a new random image
+        img.src = shuffledImages[i % shuffledImages.length];
 
-      // Fade in after the new image is loaded
-      img.onload = () => {
-        img.classList.remove("fade-out");
-      };
-    }, 1000); // matches CSS transition time
-
-    // Move to the next container for the next cycle
-    index = (index + 1) % containers.length;
-  }, 3500); // Fixed interval of 40 seconds for each container, changing one by one
+        // Fade back in
+        img.onload = () => {
+          img.classList.remove("fade-out");
+        };
+      }, 1000); // matches CSS fade-out time
+    }
+  }, 5000); // Every 5 seconds
 }
+
 
 // Start rotation with fixed 40-second interval for each container
 rotateAndMoveImages();
